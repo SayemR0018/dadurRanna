@@ -1,6 +1,6 @@
 # দাদুর রান্না (Dadur Ranna) — Family Cookbook Maker
 
-![Dadur Ranna Cover](/public/assets/cover.png)
+![Dadur Ranna Cover](https://raw.githubusercontent.com/SayemR0018/dadurRanna/main/public/assets/cover.png)
 
 > **"Dadur Ranna" (দাদুর রান্না)** is an intimate culinary preservation web app built for one real person: my friend's grandmother, whose irreplaceable culinary legacy exists only as brittle handwritten diary pages, faded envelope scribbles, and rambling, colloquial notes in mixed Bangla and English.
 

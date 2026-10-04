@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dadur-ranna
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: LLM_PROVIDER
+        value: gemma
+      - key: GEMMA_MODEL
+        value: gemma-3-27b-it
+      - key: GEMMA_API_KEY
+        sync: false

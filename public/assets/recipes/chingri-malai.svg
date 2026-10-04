@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Bowl Base -->
+  <circle cx="100" cy="100" r="92" fill="#FEF3C7" stroke="#EA580C" stroke-width="3" />
+  <circle cx="100" cy="100" r="82" fill="#FFFBEB" />
+  
+  <!-- Creamy Coconut Milk & Turmeric Gravy -->
+  <circle cx="100" cy="100" r="72" fill="#FED7AA" />
+  <ellipse cx="100" cy="100" rx="65" ry="55" fill="#FDBA74" opacity="0.6" />
+
+  <!-- Jumbo Tiger Prawn (Golda Chingri) -->
+  <g transform="translate(30, 40)">
+    <!-- Shadow -->
+    <path d="M50 35 C85 20 120 40 125 75 C128 100 110 115 85 110 C80 95 95 80 85 65 C78 55 60 50 50 35 Z" fill="#9A3412" opacity="0.25" />
+    
+    <!-- Prawn Body Curved -->
+    <path d="M48 30 C85 15 120 35 125 70 C128 95 110 110 85 105 C80 90 95 75 85 60 C78 50 58 45 48 30 Z" fill="#F97316" stroke="#C2410C" stroke-width="2" />
+
+    <!-- Segments / Shell ridges -->
+    <path d="M70 27 C80 38 82 52 75 58" stroke="#EA580C" stroke-width="2.5" fill="none" />
+    <path d="M85 32 C95 45 98 60 90 68" stroke="#EA580C" stroke-width="2.5" fill="none" />
+    <path d="M102 45 C110 58 112 72 105 80" stroke="#EA580C" stroke-width="2.5" fill="none" />
+    <path d="M112 65 C116 78 114 90 102 96" stroke="#EA580C" stroke-width="2.5" fill="none" />
+
+    <!-- Prawn Fan Tail -->
+    <path d="M85 105 L65 115 C70 108 72 102 70 96 Z" fill="#DC2626" />
+    <path d="M85 105 L72 122 C75 112 78 108 78 102 Z" fill="#EA580C" />
+
+    <!-- Head / Eyes & Antennae -->
+    <circle cx="50" cy="30" r="3" fill="#1F2937" />
+    <path d="M48 28 C35 15 20 20 10 18" stroke="#EA580C" stroke-width="1.5" fill="none" stroke-linecap="round" />
+    <path d="M50 32 C38 28 22 35 12 40" stroke="#EA580C" stroke-width="1.5" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Green Chilli floating in coconut curry -->
+  <path d="M120 120 C135 130 150 120 155 105" stroke="#16A34A" stroke-width="4.5" fill="none" stroke-linecap="round" />
+
+  <!-- Cardamom Pods & Cloves in Curry -->
+  <ellipse cx="65" cy="125" rx="5" ry="3" fill="#65A30D" stroke="#3F6212" stroke-width="1" transform="rotate(-20 65 125)" />
+  <ellipse cx="130" cy="65" rx="5" ry="3" fill="#65A30D" stroke="#3F6212" stroke-width="1" transform="rotate(35 130 65)" />
+  <circle cx="85" cy="140" r="2.5" fill="#451A03" />
+
+  <!-- Swirl of pure coconut cream -->
+  <path d="M60 85 Q75 60 100 70 Q115 80 105 95" stroke="#FFFDF8" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8" />
+</svg>

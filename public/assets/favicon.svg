@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="30" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5" />
+  <!-- Clay Pot -->
+  <path d="M16 38 C16 52 24 54 32 54 C40 54 48 52 48 38 C48 32 44 28 41 27 L23 27 C20 28 16 32 16 38 Z" fill="#9A3412" />
+  <ellipse cx="32" cy="27" rx="12" ry="3.5" fill="#F59E0B" stroke="#78350F" stroke-width="1.2" />
+  <ellipse cx="32" cy="27" rx="8" ry="2" fill="#451A03" />
+  <!-- Alpana curve -->
+  <path d="M22 39 Q32 44 42 39" fill="none" stroke="#FEF3C7" stroke-width="1.8" stroke-linecap="round" />
+  <!-- Steam lines -->
+  <path d="M27 23 C25 18 29 14 27 9" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" />
+  <path d="M37 23 C39 18 35 14 37 9" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" />
+</svg>

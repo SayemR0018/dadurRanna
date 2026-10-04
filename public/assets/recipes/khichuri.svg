@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Brass Thali / Bowl Rim -->
+  <circle cx="100" cy="100" r="92" fill="#FEF3C7" stroke="#D97706" stroke-width="3" />
+  <circle cx="100" cy="100" r="84" fill="#FDE68A" />
+  
+  <!-- Golden Khichuri Mound -->
+  <circle cx="100" cy="100" r="74" fill="#FACC15" />
+  
+  <!-- Texture blobs for cooked rice & dal -->
+  <ellipse cx="80" cy="85" rx="16" ry="10" fill="#FDE047" opacity="0.8" />
+  <ellipse cx="120" cy="85" rx="18" ry="12" fill="#FDE047" opacity="0.8" />
+  <ellipse cx="100" cy="120" rx="22" ry="14" fill="#EAB308" opacity="0.6" />
+  <ellipse cx="75" cy="115" rx="15" ry="10" fill="#FDE047" opacity="0.7" />
+  <ellipse cx="125" cy="115" rx="15" ry="10" fill="#FDE047" opacity="0.7" />
+
+  <!-- Green Peas scattered in Khichuri -->
+  <circle cx="68" cy="85" r="5" fill="#22C55E" stroke="#15803D" stroke-width="1" />
+  <circle cx="132" cy="82" r="5" fill="#22C55E" stroke="#15803D" stroke-width="1" />
+  <circle cx="78" cy="122" r="4.5" fill="#22C55E" stroke="#15803D" stroke-width="1" />
+  <circle cx="124" cy="125" r="4.5" fill="#22C55E" stroke="#15803D" stroke-width="1" />
+
+  <!-- Aromatic Bay Leaf (Tejpatta) nestled in center -->
+  <path d="M75 95 C85 80 115 85 125 100 C105 110 85 108 75 95 Z" fill="#65A30D" stroke="#3F6212" stroke-width="1.2" />
+  <line x1="80" y1="94" x2="120" y2="99" stroke="#3F6212" stroke-width="1" />
+
+  <!-- Generous dollop of melting Desi Ghee in the middle -->
+  <ellipse cx="100" cy="98" rx="16" ry="10" fill="#FEF08A" stroke="#F59E0B" stroke-width="1.5" />
+  <ellipse cx="100" cy="97" rx="10" ry="6" fill="#FBBF24" />
+  <path d="M100 106 Q98 116 102 120" stroke="#F59E0B" stroke-width="3" fill="none" stroke-linecap="round" />
+
+  <!-- Roasted Dried Red Chilli on top -->
+  <path d="M85 70 C100 62 118 68 122 75 C112 78 98 75 85 70 Z" fill="#B91C1C" stroke="#7F1D1D" stroke-width="1" />
+  <path d="M84 70 L80 68" stroke="#15803D" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Panch Phoron seeds (cumin, fenugreek, nigella, fennel) -->
+  <circle cx="62" cy="100" r="1.8" fill="#451A03" />
+  <circle cx="90" cy="132" r="1.8" fill="#1F2937" />
+  <circle cx="138" cy="102" r="1.8" fill="#451A03" />
+</svg>

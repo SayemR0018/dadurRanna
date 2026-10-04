@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Bowl Rim -->
+  <circle cx="100" cy="100" r="92" fill="#FEF3C7" stroke="#D97706" stroke-width="3" />
+  <circle cx="100" cy="100" r="82" fill="#FFFBEB" />
+  
+  <!-- Creamy Poppy Seed (Posto) Sauce Base -->
+  <circle cx="100" cy="100" r="70" fill="#FEF08A" opacity="0.6" />
+
+  <!-- Diced Potato Cubes (Aloo) -->
+  <!-- Cube 1 -->
+  <g transform="translate(60, 65)">
+    <polygon points="10,5 38,0 48,22 18,28" fill="#FDE047" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="18,28 48,22 42,42 12,46" fill="#FACC15" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="10,5 18,28 12,46 5,20" fill="#EAB308" stroke="#D97706" stroke-width="1.5" />
+  </g>
+  <!-- Cube 2 -->
+  <g transform="translate(95, 75)">
+    <polygon points="12,4 40,2 46,24 18,26" fill="#FEF08A" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="18,26 46,24 38,45 10,46" fill="#FDE047" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="12,4 18,26 10,46 5,18" fill="#EAB308" stroke="#D97706" stroke-width="1.5" />
+  </g>
+  <!-- Cube 3 (Center) -->
+  <g transform="translate(75, 95)">
+    <polygon points="15,2 45,0 52,22 20,25" fill="#FDE047" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="20,25 52,22 45,45 12,46" fill="#FACC15" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="15,2 20,25 12,46 6,18" fill="#CA8A04" stroke="#D97706" stroke-width="1.5" />
+  </g>
+  <!-- Cube 4 (Bottom Right) -->
+  <g transform="translate(110, 105)">
+    <polygon points="10,2 32,2 36,18 14,20" fill="#FEF08A" stroke="#D97706" stroke-width="1.5" />
+    <polygon points="14,20 36,18 30,34 8,36" fill="#FDE047" stroke="#D97706" stroke-width="1.5" />
+  </g>
+
+  <!-- Poppy seed (Posto) textured coating granules -->
+  <g fill="#A16207" opacity="0.35">
+    <circle cx="75" cy="78" r="1.5" /><circle cx="82" cy="84" r="1.5" /><circle cx="90" cy="76" r="1.5" />
+    <circle cx="112" cy="85" r="1.5" /><circle cx="125" cy="92" r="1.5" /><circle cx="104" cy="98" r="1.5" />
+    <circle cx="85" cy="110" r="1.5" /><circle cx="98" cy="115" r="1.5" /><circle cx="118" cy="122" r="1.5" />
+    <circle cx="70" cy="125" r="1.5" /><circle cx="82" cy="132" r="1.5" /><circle cx="92" cy="128" r="1.5" />
+  </g>
+
+  <!-- Green Chilli Slit -->
+  <path d="M72 135 C90 148 115 142 128 130" stroke="#16A34A" stroke-width="4.5" fill="none" stroke-linecap="round" />
+  <circle cx="68" cy="132" r="2" fill="#14532D" />
+
+  <!-- Whole dried red chilli (Tempering) -->
+  <path d="M125 65 C135 60 148 70 145 80" stroke="#DC2626" stroke-width="4" fill="none" stroke-linecap="round" />
+  <!-- Nigella specks -->
+  <circle cx="68" cy="95" r="2" fill="#1F2937" />
+  <circle cx="135" cy="105" r="2" fill="#1F2937" />
+  <circle cx="100" cy="142" r="2" fill="#1F2937" />
+</svg>

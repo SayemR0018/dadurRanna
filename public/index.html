@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>দাদুর রান্না (Dadur Ranna) — Family Cookbook Maker</title>
+  <meta name="description" content="Turn grandmother's handwritten Bengali recipe pages and rambling notes into a structured, bilingual family cookbook with open-weight Gemma.">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="দাদুর রান্না (Dadur Ranna) — Family Cookbook Maker">
+  <meta property="og:description" content="Preserving handwritten Bengali culinary heritage with Google Gemma. Private, bilingual, serving scaler, and print-to-PDF.">
+  <meta property="og:image" content="/assets/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/assets/cover.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <!-- Google Fonts: Noto Sans Bengali & Noto Serif Bengali -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-link" id="brand-home-btn">
+        <img src="/assets/logo.svg" alt="Dadur Ranna Logo" class="brand-logo">
+        <div class="brand-text">
+          <h1>দাদুর রান্না</h1>
+          <span class="tagline">Dadur Ranna · Heirloom Cookbook Maker</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-outline btn-sm" id="load-demo-btn" title="Load 6 authentic Bengali recipes">
+          ⚡ ডেমো লোড করুন (Demo)
+        </button>
+        <button type="button" class="btn btn-primary btn-sm" id="open-print-modal-btn" title="Print keepsake cookbook">
+          🖨️ প্রিন্ট / PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h2>দাদুর হাতের জাদুকরী রান্নার খাতা, চিরতরে সংরক্ষিত।</h2>
+        <p>
+          Grandmother's handwritten diaries, faded envelope scribbles, and rambling mixed Bangla/English notes—transformed into a structured family keepsake.
+        </p>
+        
+        <div class="hero-badges">
+          <span class="badge-pill">📷 হাতের লেখার ছবি ও টেক্সট</span>
+          <span class="badge-pill">⚠️ হলুদ Uncertainty হাইলাইট</span>
+          <span class="badge-pill">⚖️ ভগ্নাংশ স্কেলার (½, ¼)</span>
+          <span class="badge-pill">🔒 সম্পূর্ণ প্রাইভেট (LocalStorage)</span>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button type="button" class="btn btn-chili" id="hero-create-btn">
+            ✍️ নতুন রেসিপি উদ্ধার করুন
+          </button>
+          <button type="button" class="btn btn-outline" id="hero-view-cookbook-btn">
+            📖 সংরক্ষিত রান্নার খাতা (<span class="cookbook-badge-count">0</span>)
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img src="/assets/hero.svg" alt="Bengali Kitchen and Recipe Diary" class="hero-illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Tab Navigation -->
+      <nav class="tab-nav">
+        <button type="button" class="tab-btn active" id="tab-btn-extract">
+          ✍️ রেসিপি উদ্ধার ও এডিটর (Extract &amp; Edit)
+        </button>
+        <button type="button" class="tab-btn" id="tab-btn-cookbook">
+          📖 পারিবারিক রান্নার বই (My Cookbook) 
+          <span class="tab-count cookbook-badge-count">0</span>
+        </button>
+      </nav>
+
+      <!-- TAB 1: CREATOR & EXTRACTOR -->
+      <section id="creator-section">
+        <div class="kitchen-card" style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem; color: var(--chili-800);">
+            ১. নোটের ছবি তুলুন অথবা এলোমেলো লেখা পেস্ট করুন
+          </h3>
+          <p style="color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Upload photo(s) of grandmother's handwritten recipe page or paste rambling voice notes / scribbles.
+          </p>
+
+          <form id="extract-form">
+            <div class="input-grid">
+              
+              <!-- Left: Image Upload Zone -->
+              <div>
+                <label style="display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--turmeric-700);">
+                  📷 রেসিপির ছবি (Handwritten Photos)
+                </label>
+                
+                <div class="dropzone" id="dropzone">
+                  <div class="dropzone-icon">📷</div>
+                  <strong style="color: var(--ink-charcoal);">ছবি ড্রপ করুন বা ক্লিক করুন</strong>
+                  <span style="font-size: 0.85rem; color: var(--ink-faint);">JPG, PNG, WebP (Max 4 files, compressed client-side)</span>
+                  <input type="file" id="image-input" accept="image/jpeg,image/png,image/webp" multiple style="display: none;">
+                </div>
+
+                <div class="file-preview-strip" id="file-preview-strip"></div>
+              </div>
+
+              <!-- Right: Messy Text Input -->
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <label style="font-weight: 600; font-size: 0.95rem; color: var(--turmeric-700);">
+                    ✍️ এলোমেলো নোট (Messy Text / Banglish)
+                  </label>
+                  <button type="button" class="btn btn-outline btn-sm" id="sample-text-btn" style="padding: 0.2rem 0.6rem; font-size: 0.8rem;">
+                    💡 নমুনা নোট টেস্ট করুন
+                  </button>
+                </div>
+
+                <textarea 
+                  id="recipe-text-input" 
+                  class="text-input-area" 
+                  placeholder="এখানে নোট লিখুন বা পেস্ট করুন... যেমন: 'ইলিশ ৪ পিস, সর্ষে ২ চামচ নুন লঙ্কা দিয়ে বাটা, কাঁচা তেল দিয়ে নামাবে...'"></textarea>
+                
+                <div style="display: flex; justify-content: flex-end; margin-top: 0.4rem;">
+                  <button type="button" class="btn btn-secondary btn-sm" id="clear-text-btn">মুছে ফেলুন (Clear)</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Privacy Note & Submit Button -->
+            <div class="input-actions-bar">
+              <div class="privacy-banner">
+                🔒 <span>Photos are sent only to the configured model for transcription and are not stored on the server.</span>
+              </div>
+
+              <button type="submit" class="btn btn-chili" id="extract-submit-btn" style="padding: 0.75rem 1.75rem; font-size: 1.05rem;">
+                ✨ জেম্মা দিয়ে রেসিপি উদ্ধার করুন (Extract Recipe)
+              </button>
+            </div>
+          </form>
+
+          <!-- Loading Steam Animation -->
+          <div class="loading-box" id="loading-box">
+            <svg class="steaming-pot" viewBox="0 0 100 100">
+              <path class="steam-path" d="M40 30 C36 20 44 14 38 4" stroke="#D97706" stroke-width="3" fill="none" stroke-linecap="round" />
+              <path class="steam-path" d="M50 28 C56 18 48 10 52 2" stroke="#B45309" stroke-width="3.5" fill="none" stroke-linecap="round" style="animation-delay: 0.4s;" />
+              <path class="steam-path" d="M60 30 C64 20 58 14 62 4" stroke="#D97706" stroke-width="3" fill="none" stroke-linecap="round" style="animation-delay: 0.8s;" />
+              <path d="M25 60 C25 80 40 85 50 85 C60 85 75 80 75 60 L25 60 Z" fill="#9A3412" />
+              <ellipse cx="50" cy="60" rx="28" ry="7" fill="#F59E0B" />
+              <ellipse cx="50" cy="58" rx="22" ry="4" fill="#451A03" />
+            </svg>
+            <h4 style="color: var(--chili-800); font-size: 1.2rem; margin-bottom: 0.3rem;">
+              দাদুর হাতের লেখা পাঠোদ্ধার করা হচ্ছে...
+            </h4>
+            <p style="color: var(--ink-muted); font-size: 0.9rem;" id="loading-status-text">
+              Gemma is analyzing ingredients, deciphering scribbles, and translating instructions...
+            </p>
+          </div>
+        </div>
+
+        <!-- RECIPE EDITOR CARD (Shown after extraction or selection) -->
+        <div class="kitchen-card" id="recipe-editor-card" style="display: none;">
+          
+          <!-- Uncertainty Warning Banner -->
+          <div class="uncertain-warning-banner" id="uncertain-banner" style="display: none;">
+            <div class="uncertain-title">
+              <span>⚠️</span>
+              <span>যাচাই প্রয়োজন: দাদুর নোটে কিছু অস্পষ্ট বিষয় রয়েছে (Uncertain Items Detected)</span>
+            </div>
+            <p style="font-size: 0.88rem; margin: 0;">
+              Gemma never silently guesses faded measurements. Please confirm these items with the cook:
+            </p>
+            <ul class="uncertain-list" id="uncertain-list"></ul>
+          </div>
+
+          <!-- Recipe Toolbar: Scaler & Language Toggle -->
+          <div class="recipe-toolbar">
+            <div class="control-group">
+              <span class="control-label">👥 পরিবেশন সংখ্যা (Servings):</span>
+              <div class="scaler-controls">
+                <button type="button" class="scaler-btn" id="scaler-minus-btn" title="Decrease servings">−</button>
+                <span class="scaler-value" id="scaler-value">4</span>
+                <button type="button" class="scaler-btn" id="scaler-plus-btn" title="Increase servings">+</button>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--ink-muted);">(অনুপাত স্বয়ংক্রিয়ভাবে হিসেব হবে)</span>
+            </div>
+
+            <div class="control-group">
+              <span class="control-label">🌐 ভাষা (Language):</span>
+              <div class="lang-toggle-group">
+                <button type="button" class="lang-btn active" data-lang="bilingual">উভয় (Both)</button>
+                <button type="button" class="lang-btn" data-lang="bn">বাংলা</button>
+                <button type="button" class="lang-btn" data-lang="en">English</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe Header: Titles & Meta -->
+          <div class="recipe-header">
+            <div class="recipe-title-group">
+              <input type="text" id="recipe-title-bn" class="title-bn-input" placeholder="বাংলা নাম (e.g. দাদুর সর্ষে ইলিশ)">
+              <input type="text" id="recipe-title-en" class="title-en-input" placeholder="English Title (e.g. Dadu's Mustard Hilsa)">
+              
+              <div class="recipe-meta-strip">
+                <div class="meta-item">
+                  ⏱️ সময়: <input type="number" id="recipe-time-minutes" style="width: 50px; font-weight: bold; border: 1px solid var(--paper-edge); border-radius: 4px; padding: 2px 4px;" value="30"> মিনিট
+                </div>
+                <div class="meta-item">
+                  🍽️ পরিবেশন: <span id="meta-servings-display">4</span> জন
+                </div>
+              </div>
+            </div>
+
+            <div class="recipe-art-thumbnail" id="editor-recipe-art">
+              <img src="/assets/recipes/shorshe-ilish.svg" alt="Recipe illustration" id="editor-art-img">
+            </div>
+          </div>
+
+          <!-- Two Columns: Ingredients & Steps -->
+          <div class="recipe-columns">
+            
+            <!-- Left: Ingredients -->
+            <div>
+              <div class="section-heading">
+                <span>🥕 উপকরণ তালিকা (Ingredients)</span>
+                <button type="button" class="btn btn-outline btn-sm" id="add-ingredient-btn">
+                  + নতুন যোগ করুন
+                </button>
+              </div>
+
+              <table class="ingredients-table" id="ingredients-table">
+                <thead>
+                  <tr>
+                    <th>উপকরণ (বাংলা / English)</th>
+                    <th style="width: 70px; text-align: right;">পরিমাণ</th>
+                    <th style="width: 75px;">একক</th>
+                    <th style="width: 30px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="ingredients-tbody">
+                  <!-- Rows generated dynamically -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Right: Steps -->
+            <div>
+              <div class="section-heading">
+                <span>🔥 রান্নার প্রণালী (Cooking Steps)</span>
+                <button type="button" class="btn btn-outline btn-sm" id="add-step-btn">
+                  + ধাপ যোগ করুন
+                </button>
+              </div>
+
+              <ol class="steps-list" id="steps-list">
+                <!-- Steps generated dynamically -->
+              </ol>
+            </div>
+          </div>
+
+          <!-- Grandma's Verbatim Notes Box -->
+          <div class="grandma-notes-card">
+            <textarea id="recipe-notes-input" class="notes-textarea" placeholder="দাদুর বিশেষ টিপস, সতর্কবার্তা বা স্মৃতি..."></textarea>
+          </div>
+
+          <!-- Footer Actions: Save, Print Single, Discard -->
+          <div class="recipe-footer-actions">
+            <button type="button" class="btn btn-outline" id="print-single-recipe-btn">
+              🖨️ এই রেসিপিটি প্রিন্ট করুন
+            </button>
+            <button type="button" class="btn btn-primary" id="save-recipe-btn" style="padding: 0.65rem 1.5rem;">
+              💾 রান্নার খাতায় সেভ করুন (Save to Cookbook)
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- TAB 2: COOKBOOK VIEW -->
+      <section id="cookbook-view" style="display: none;">
+        <div class="cookbook-header">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="cookbook-search" class="search-input" placeholder="রেসিপি বা উপকরণ দিয়ে খুঁজুন (Search)...">
+          </div>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button type="button" class="btn btn-chili btn-sm" id="print-all-recipes-btn">
+              🖨️ পুরো খাতা প্রিন্ট করুন (PDF)
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="export-cookbook-btn">
+              📤 এক্সপোর্ট (Export JSON)
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" id="import-cookbook-btn">
+              📥 ইমপোর্ট (Import JSON)
+            </button>
+            <input type="file" id="import-file-input" accept=".json" style="display: none;">
+            <button type="button" class="btn btn-secondary btn-sm" id="clear-all-btn">
+              মুছে ফেলুন (Reset)
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe Cards Grid -->
+        <div class="recipes-grid" id="recipes-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Empty State (Shown when 0 recipes) -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <img src="/assets/empty-state.svg" alt="Empty Cookbook" class="empty-illustration">
+          <h3 style="color: var(--chili-800); margin-bottom: 0.5rem;">আপনার রান্নার খাতা এখনো খালি!</h3>
+          <p style="color: var(--ink-muted); max-width: 460px; margin: 0 auto 1.5rem;">
+            দাদুর হাতের লেখার ছবি আপলোড করুন অথবা ডেমো বাটন চেপে ৬টি সুস্বাদু সাবেক বাঙালি রেসিপি লোড করুন।
+          </p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary" id="empty-load-demo-btn">
+              ⚡ ডেমো রেসিপিগুলো লোড করুন
+            </button>
+            <button type="button" class="btn btn-chili" id="empty-create-btn">
+              ✍️ নতুন রেসিপি যোগ করুন
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PRINT MODAL (Customize Dedication & Cover before PDF) -->
+  <div class="modal-overlay" id="dedication-modal">
+    <div class="modal-content">
+      <button type="button" class="modal-close-btn" id="modal-close-btn">&times;</button>
+      <h3 style="color: var(--chili-800); margin-bottom: 0.5rem;">🖨️ পারিবারিক বই প্রিন্ট / PDF প্রস্তুত করুন</h3>
+      <p style="color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+        The book will include an Alpana-bordered Cover Page, Table of Contents, and one recipe per printed page.
+      </p>
+
+      <label style="display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4rem; color: var(--turmeric-700);">
+        বইয়ের উৎসর্গপত্র (Dedication Line):
+      </label>
+      <input 
+        type="text" 
+        id="print-dedication-input" 
+        class="text-input-area" 
+        style="min-height: 44px; margin-bottom: 1.25rem;"
+        value="দাদুর জন্য, অফুরন্ত ভালোবাসা ও কৃতজ্ঞতায় (For Dadu, with love and eternal gratitude)">
+
+      <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+        <button type="button" class="btn btn-secondary" id="modal-cancel-btn">বাতিল</button>
+        <button type="button" class="btn btn-chili" id="trigger-final-print-btn">
+          🖨️ প্রিন্ট প্রিভিউ খুলুন (Save as PDF)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRINT-ONLY CONTAINER (Populated dynamically and styled with @media print) -->
+  <div id="print-container"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div style="max-width: 380px;">
+          <h4 style="color: #FEF3C7; margin-bottom: 0.5rem; font-size: 1.2rem;">দাদুর রান্না (Dadur Ranna)</h4>
+          <p style="font-size: 0.85rem; color: #D6D3D1; line-height: 1.5;">
+            A family cookbook archiver dedicated to the grandmothers whose culinary genius lives on in handwritten notebooks and fragrant kitchens.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #FEF3C7; margin-bottom: 0.5rem; font-size: 1rem;">গোপনীয়তা ও স্বাধীনতা (Open Freedom)</h4>
+          <p style="font-size: 0.85rem; color: #D6D3D1; line-height: 1.5;">
+            • Zero database: Saved in your browser's LocalStorage.<br>
+            • Photos never stored on the server.<br>
+            • Swap freely to local Ollama with zero code changes.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #FEF3C7; margin-bottom: 0.5rem; font-size: 1rem;">প্রযুক্তি স্ট্যাক (Tech Stack)</h4>
+          <span class="badge-pill" id="footer-model-badge" style="background: rgba(245, 158, 11, 0.2); color: #FDE68A; border-color: #B45309;">
+            ⚡ Powered by open-weight Gemma
+          </span>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        Crafted with love for heirloom recipes. MIT Licensed.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/demo-recipes.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

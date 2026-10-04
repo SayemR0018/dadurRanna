@@ -1,0 +1,37 @@
+{
+  "name": "dadur-ranna",
+  "version": "1.0.0",
+  "description": "Dadur Ranna (দাদুর রান্না) - A family cookbook maker for handwritten pages and rambling notes, powered by open-weight Gemma",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "images": "node scripts/make-images.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "cookbook",
+    "gemma",
+    "open-weight",
+    "bengali",
+    "recipes",
+    "ai"
+  ],
+  "author": "Sayem",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.4.7",
+    "express": "5.2.1",
+    "express-rate-limit": "8.7.0",
+    "helmet": "8.3.0",
+    "multer": "2.0.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "sharp": "0.35.5"
+  }
+}

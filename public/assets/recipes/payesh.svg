@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Traditional Clay Shora / Earthen Plate Rim -->
+  <circle cx="100" cy="100" r="92" fill="#D97706" stroke="#9A3412" stroke-width="4" />
+  <circle cx="100" cy="100" r="82" fill="#B45309" />
+  
+  <!-- Warm Caramel-hued Nolen Gur Payesh (Thick Reduced Milk & Jaggery) -->
+  <circle cx="100" cy="100" r="72" fill="#FDE68A" />
+  <circle cx="100" cy="100" r="68" fill="#FBBF24" opacity="0.6" />
+
+  <!-- Soft Rice grains showing beneath surface -->
+  <g fill="#FEF08A" opacity="0.7">
+    <ellipse cx="75" cy="85" rx="5" ry="2.5" transform="rotate(30 75 85)" />
+    <ellipse cx="88" cy="78" rx="5" ry="2.5" transform="rotate(-15 88 78)" />
+    <ellipse cx="120" cy="82" rx="5" ry="2.5" transform="rotate(45 120 82)" />
+    <ellipse cx="132" cy="98" rx="5" ry="2.5" transform="rotate(10 132 98)" />
+    <ellipse cx="78" cy="115" rx="5" ry="2.5" transform="rotate(-40 78 115)" />
+    <ellipse cx="118" cy="120" rx="5" ry="2.5" transform="rotate(25 118 120)" />
+  </g>
+
+  <!-- Roasted Cashew Nuts (Kaju) -->
+  <!-- Cashew 1 -->
+  <path d="M85 92 C82 85 92 82 100 88 C104 92 102 98 96 98 C90 98 87 96 85 92 Z" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2" />
+  <!-- Cashew 2 -->
+  <path d="M105 105 C102 98 112 95 120 101 C124 105 122 111 116 111 C110 111 107 109 105 105 Z" fill="#FFFBEB" stroke="#D97706" stroke-width="1.2" />
+
+  <!-- Raisins (Kishmish) Plump in warm pudding -->
+  <ellipse cx="75" cy="100" rx="6" ry="4" fill="#92400E" stroke="#78350F" stroke-width="1" transform="rotate(-30 75 100)" />
+  <ellipse cx="110" cy="85" rx="6" ry="4" fill="#92400E" stroke="#78350F" stroke-width="1" transform="rotate(40 110 85)" />
+  <ellipse cx="95" cy="122" rx="5.5" ry="3.5" fill="#92400E" stroke="#78350F" stroke-width="1" transform="rotate(15 95 122)" />
+
+  <!-- Fragrant Green Cardamom Seeds & Crushed Pistachios -->
+  <circle cx="95" cy="95" r="2" fill="#15803D" />
+  <circle cx="102" cy="92" r="1.5" fill="#15803D" />
+  <circle cx="88" cy="108" r="1.8" fill="#15803D" />
+  <circle cx="122" cy="112" r="1.8" fill="#15803D" />
+
+  <!-- Swirl of golden date-palm jaggery syrup -->
+  <path d="M68 92 Q90 65 115 75 Q135 88 125 110 Q110 130 90 120" stroke="#B45309" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65" />
+</svg>
